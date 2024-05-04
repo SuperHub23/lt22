@@ -94,8 +94,23 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Axe Dupe"
 })
+local Slot = 1
 Tab:AddLabel("Dupes above 9 axes dont work!")
 Tab:AddLabel("Reset after each dupe above 9 or you wont get more!")
+Tab:AddSlider({
+	Name = "Slot",
+	Min = 1,
+	Max = 6,
+	Default = 1,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Slot",
+	Callback = function(Value)
+			slot = Value
+		print(Value)
+	end    
+})
+
 Tab:AddButton({
     Name = "Dupe Slot 1!",
     Callback = function()
@@ -108,7 +123,7 @@ Tab:AddButton({
         wait(2)
 
         local args = {
-            [1] = 1,
+            [1] = Slot,
             [2] = game:GetService("Players").LocalPlayer
         }
 
@@ -116,6 +131,26 @@ Tab:AddButton({
         print("button pressed")
 	wait(62)
     end
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+
+local Tab = Window:MakeTab({
+	Name = "Car",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Car Speed(Dont Work)",
+	Callback = function()
+			
+      		print("button pressed")
+  	end    
 })
 
 --[[
