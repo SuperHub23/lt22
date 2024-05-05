@@ -60,7 +60,6 @@ local Section = Tab:AddSection({
 --[[
 Name = <string> - The name of the section.
 ]]
-
 Tab:AddSlider({
     Name = "JumpPower",
     Min = 3,
@@ -84,13 +83,11 @@ Default = <number> - The default value of the slider.
 ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
-
 local Tab = Window:MakeTab({
 	Name = "Dupe",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
 local Section = Tab:AddSection({
 	Name = "Axe Dupe"
 })
@@ -112,6 +109,7 @@ Tab:AddSlider({
 })
 
 Tab:AddButton({
+    Name = "Dupe Slot 1!",
     Name = "Dupe",
     Callback = function()
         local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -121,30 +119,24 @@ Tab:AddButton({
 	wait(0.2)
 	pl.CFrame = location
         wait(2)
-
         local args = {
             [1] = Slot,
             [2] = game:GetService("Players").LocalPlayer
         }
-
         game:GetService("ReplicatedStorage"):WaitForChild("LoadSaveRequests"):WaitForChild("RequestLoad"):InvokeServer(unpack(args))
         print("button pressed")
 	wait(62)
     end
 })
-
 --[[
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
-
-
 local Tab = Window:MakeTab({
 	Name = "Car",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
 Tab:AddButton({
 	Name = "Car Speed(Dont Work)",
 	Callback = function()
@@ -152,12 +144,10 @@ Tab:AddButton({
       		print("button pressed")
   	end    
 })
-
 --[[
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
-
 local Tab = Window:MakeTab({
 	Name = "ESP",
 	Icon = "rbxassetid://4483345998",
