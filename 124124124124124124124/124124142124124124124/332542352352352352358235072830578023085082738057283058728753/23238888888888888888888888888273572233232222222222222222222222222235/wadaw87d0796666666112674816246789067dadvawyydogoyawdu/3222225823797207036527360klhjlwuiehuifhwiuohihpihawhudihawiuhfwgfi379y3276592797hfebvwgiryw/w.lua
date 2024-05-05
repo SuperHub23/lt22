@@ -112,7 +112,7 @@ Tab:AddSlider({
 })
 
 Tab:AddButton({
-    Name = "Dupe Slot 1!",
+    Name = "Dupe",
     Callback = function()
         local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 	local location = CFrame.new(43, -319, -484)
