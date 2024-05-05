@@ -91,7 +91,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Axe Dupe"
 })
-local Slot = 1
+local E = 1
 Tab:AddLabel("Dupes above 9 axes dont work!")
 Tab:AddLabel("Reset after each dupe above 9 or you wont get more!")
 Tab:AddSlider({
@@ -103,13 +103,13 @@ Tab:AddSlider({
 	Increment = 1,
 	ValueName = "Slot",
 	Callback = function(Value)
-			slot = Value
+			E = Value
 		print(Value)
 	end    
 })
 
 Tab:AddButton({
-    Name = "Dupe Slot 1!",
+    Name = "Dupe",
     Name = "Dupe",
     Callback = function()
         local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -120,7 +120,7 @@ Tab:AddButton({
 	pl.CFrame = location
         wait(2)
         local args = {
-            [1] = Slot,
+            [1] = E,
             [2] = game:GetService("Players").LocalPlayer
         }
         game:GetService("ReplicatedStorage"):WaitForChild("LoadSaveRequests"):WaitForChild("RequestLoad"):InvokeServer(unpack(args))
