@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "SuperHub", HidePremium = false, SaveConfig = true, ConfigFolder = "SuperHubLT2"})
+local Window = OrionLib:MakeWindow({Name = "SuperHub", IntroText = "Loading...", Icon = "rbxassetid://17536078972", HidePremium = false, SaveConfig = true, ConfigFolder = "SuperHubLT2"})
 --[[
 Name = SuperHub - The name of the UI.
 HidePremium = <bool> - Whether or not the user details shows Premium status or not.
